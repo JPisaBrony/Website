@@ -280,7 +280,8 @@ a:visited {
     z-index: 2;
     position: absolute;
     padding: 2px;
-    padding-top: 10%;
+    padding-top: 20px;
+    display: none;
 }
 
 

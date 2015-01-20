@@ -43,14 +43,30 @@
                   // trigger layout
                   msnry.layout();
                 });
+                
+            document.onscroll = function() {
+		var prof = document.getElementById('profile');
+		var top = $( document.body ).scrollTop();
+		var h = window.innerHeight;
+		prof.style.paddingTop = (h/2) - 277 + top + "px";
+            };
             
             $('img').bind('click', function() {
-		
-		
-		
-                //$(this).parent().toggleClass('gigante');
-            });
+		var prof = document.getElementById('profile');
+		var top = document.scrollTop;
+		var w = window.innerWidth;
+		var h = window.innerHeight;
+		prof.style.width = w/2 + "px";
+		prof.style.height = "454px";
+		prof.style.display = "block";
+		prof.style.paddingTop = (h/2)-277 + top + "px";
+            });            
         }
+        
+        function removeProfile() {
+		var prof = document.getElementById('profile');
+		prof.style.display = "none";
+            }
         </script>
 
     </head>
@@ -77,7 +93,7 @@
         </div>
 
         <!-- invisible container for displaying profile pictures -->
-	<div class="member_profile">TESTING</div>
+	<div id="profile" class="member_profile" onclick="removeProfile()">TESTING</div>
         
         <div id="member_container">
             <div id="members">
