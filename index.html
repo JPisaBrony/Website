@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/jquery-2.1.3.min.js"></script>
+
+        <script>
+        var quotes = [
+            "Non-Secret",
+            "Advancement of Justice",
+            "Promotion of Friendship",
+            "Development of Character",
+            "Diffusion of Liberal Culture",
+            "Dikaia Upotheke",
+            "Building Better Men",
+            "Justice, Our Foundation",
+            ];
+
+        var i = 0;
+        
+        //fuck off
+        setInterval(function() {
+            $("#blurb").fadeOut("slow");
+            setTimeout(function() {
+                if (i == quotes.length - 1) {
+                    i = 0;
+                }
+                else {
+                    i++;
+                }
+                $("#blurb").html(quotes[i]);
+                $("#blurb").fadeIn("slow");
+            }, 1000);
+        }, 5*1000);
+
+        </script>
+
+    </head>
+    <body onload="$('#blurb').html(quotes[0]);">
+
+    <div id="container">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div id="header">
+            <div class="blur">
+            </div>
+            <ul class="nav">
+                <li><a class="home" href="index.html"> 
+                        <img src="/img/badgebw.png">
+                    </a>
+                </li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="hang_out.html">Events</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="content.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="DU">
+        <p>Delta Upsilon</p>
+        </div>
+
+        <div id="blurb">
+        <p></p>
+        </div>
+    </div>
+
+    <div id="footer">
+    <ul>
+        <a href="members.html"><li><i class="fa fa-twitter fa-lg"></i>@DELTAUNDSU</li></a>
+        <a href="hang_out.html"><li><i class="fa fa-facebook fa-lg"></i>DELTAUPSILONNDSU</li></a>
+        <li><i class="fa fa-home fa-lg"></i>
+            1258 12TH ST N.
+        </li>
+    </ul>
+
+    </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

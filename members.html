@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/members.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/jquery-2.1.3.min.js"></script>
+        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/eventie.js"></script>
+    
+        <script>
+        function gallery() {
+            var container = document.querySelector('#members');
+            var msnry = new Masonry( container, {
+              // options
+              //columnWidth: 0,
+              itemSelector: '.member',
+              isFitWidth: true,
+              isOriginTop: true,
+              
+            });
+
+            eventie.bind( container, 'click', function( event ) {
+                  // don't proceed if item was not clicked on
+                  if ( !classie.has( event.target, 'member' ) ) {
+                    return;
+                  }
+                  // change size of item via class
+                  classie.toggle( event.target, 'gigante' );
+                  // trigger layout
+                  msnry.layout();
+                });
+            
+            $('img').bind('click', function() {
+		
+		
+		
+                //$(this).parent().toggleClass('gigante');
+            });
+        }
+        </script>
+
+    </head>
+
+    <body onload="gallery();">
+
+    <div id="container">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div id="header">
+            <ul class="nav">
+                <li><a class="home" href="index.html"> 
+                        <img src="/img/badgebw.png">
+                    </a>
+                </li>
+                <li><a href="members.html"><span style="color: #1567E8;">Members</span></a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="content.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- invisible container for displaying profile pictures -->
+	<div class="member_profile">TESTING</div>
+        
+        <div id="member_container">
+            <div id="members">
+
+                <div class="member">
+                    <img src="/img/members/space.jpg">
+                </div> 
+                <div class="member">     
+                    <img src="/img/members/wood.jpg">
+                </div>
+                <div class="member">
+                    <img src="/img/members/space.jpg">
+                </div>
+                <div class="member">
+                    <img src="/img/members/wood.jpg">
+                </div>
+                <div class="member">
+                    <img src="/img/members/space.jpg">
+                </div>
+                <div class="member">
+                    <img src="/img/members/wood.jpg">
+                </div>
+                <div class="member">
+                        <img src="/img/members/wood.jpg">
+                </div>
+                <div class="member">
+                        <img src="/img/members/wood.jpg">
+                </div>
+                <div class="member">
+                        <img src="/img/members/space.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+            <ul>
+                <a href="members.html"><li><i class="fa fa-twitter fa-lg"></i>@DELTAUNDSU</li></a>
+                <a href="hang_out.html"><li><i class="fa fa-facebook fa-lg"></i>DELTAUPSILONNDSU</li></a>
+                <li><i class="fa fa-home fa-lg"></i>
+                    1258 12TH ST N.
+                </li>
+            </ul>
+        </div>
+  
+
+    
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
