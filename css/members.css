@@ -132,29 +132,6 @@ a:visited {
     src: url('/fonts/Ostrich.otf');
 }
 
-#DU {
-    float:left;
-    width: 100%;
-    margin-top: 2%;
-    margin-bottom: -25px;
-    text-align: center;
-    font-family: "HelveticaNeue-UltraLight";
-    font-size: 100px;
-    color: #A0522D;
-    
-}
-
-#blurb {
-    position: relative;
-    width: 66%;
-    margin: auto;
-    text-align: center;
-    font-family: "HelveticaNeue-UltraLight";
-    font-size: 50px;
-    color: white;
-}
-
-
 /*#footer {
     min-width: 960px;
     position: absolute;
@@ -274,14 +251,35 @@ a:visited {
 }
 
 .member_profile {
-    height: 554px;
-    width: 50%;
+    height: 540px;
+    width: 680px;
     left: 25%;
+    z-index: 3;
+    position: absolute;
+    padding: 4px;
+    margin-yop: 20px;
+    display: none;
+    background-color: rgba(0,0,0,1);
+
+}
+
+.profile_back {
+    display: none;
     z-index: 2;
     position: absolute;
-    padding: 2px;
-    padding-top: 20px;
-    display: none;
+    height: 89%;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+
+}
+
+.profile_info {
+    float: right; 
+    color: white;
+    width: 40%; 
+    height: 500px;
+    padding: 10px;
+    word-break: break-all;
 }
 
 

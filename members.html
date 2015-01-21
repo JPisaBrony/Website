@@ -48,24 +48,33 @@
 		var prof = document.getElementById('profile');
 		var top = $( document.body ).scrollTop();
 		var h = window.innerHeight;
-		prof.style.paddingTop = (h/2) - 277 + top + "px";
+		prof.style.top = (h/2) - 320 + top + "px";
             };
             
             $('img').bind('click', function() {
 		var prof = document.getElementById('profile');
-		var top = document.scrollTop;
+		var profb = document.getElementById('profile_back');
+
+		var top = $( document.body ).scrollTop();
 		var w = window.innerWidth;
 		var h = window.innerHeight;
 		prof.style.width = w/2 + "px";
-		prof.style.height = "454px";
+		
 		prof.style.display = "block";
-		prof.style.paddingTop = (h/2)-277 + top + "px";
+		profb.style.display = "block";
+
+		prof.style.top = (h/2)-320 + top + "px";
+
+		var source = this.src;
+		document.getElementById('prof_img').src = source;
             });            
         }
         
         function removeProfile() {
 		var prof = document.getElementById('profile');
+		var profb = document.getElementById('profile_back');
 		prof.style.display = "none";
+		profb.style.display = "none";
             }
         </script>
 
@@ -92,8 +101,15 @@
             </ul>
         </div>
 
-        <!-- invisible container for displaying profile pictures -->
-	<div id="profile" class="member_profile" onclick="removeProfile()">TESTING</div>
+        <!-- invisible container for displaying profile pictures and fuck off-->
+	<div id="profile_back" class="profile_back" onclick="removeProfile()">
+		<div id="profile" class="member_profile" onclick="removeProfile()">
+			<img id="prof_img" width="540px" height="540px" style="float:left"/>
+				<div class="profile_info">
+				asdasdasssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssssdasdasdasd
+			</div>
+		</div>
+	</div>
         
         <div id="member_container">
             <div id="members">
@@ -117,13 +133,13 @@
                     <img src="/img/members/wood.jpg">
                 </div>
                 <div class="member">
-                        <img src="/img/members/wood.jpg">
+                    <img src="/img/members/wood.jpg">
                 </div>
                 <div class="member">
-                        <img src="/img/members/wood.jpg">
+                    <img src="/img/members/wood.jpg">
                 </div>
                 <div class="member">
-                        <img src="/img/members/space.jpg">
+                    <img src="/img/members/space.jpg">
                 </div>
             </div>
         </div>
